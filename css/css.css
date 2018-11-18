@@ -1,0 +1,376 @@
+/* variable declarations */
+:root {
+    --myapp-color-background: white;
+    --myapp-color-separator: rgb(217, 217, 217);
+    --myapp-color-main: rgb(217, 217, 217);
+    --myapp-color-header: white;
+}
+
+/*  ---------------- General -------------- */
+html,
+body {
+    background-color: var(--myapp-color-background);
+    margin: 0px;
+    font-family: "Avenir Medium", sans-serif;
+    color: black;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    max-height: 100%;
+    overflow: hidden;
+}
+
+* {
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    transition: all 2s;
+}
+
+main {
+    margin-top: 50px;
+    width: 100%;
+    max-height: calc(100% - 103px);
+    max-height: -webkit-calc(100% - 103px);
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background: var(--myapp-color-main);
+}
+
+/*  ---------------- Header -------------- */
+header {
+    display: flex;
+    top: 0px;
+    z-index: 100;
+    position: fixed;
+    background: var(--myapp-color-header);
+    height: 50px;
+    width: 100%;
+    max-width: 100%;
+    line-height: 50px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+header h1 {
+    font-size: 18pt;
+    margin: auto auto auto 10px;
+    justify-content: flex-start;
+    font-weight: normal;
+    display: inline-block;
+}
+
+.imgbutton {
+    background-color: transparent;
+    height: 30px;
+    width: 30px;
+    margin-right: 10px;
+    margin-left: 10px;
+    padding: 0px;
+    border: none;
+    background-repeat: no-repeat;
+    background-size: auto !important;
+    display: inline-block;
+    background-origin: content-box;
+    background-position: center center;
+    filter: invert(60%);
+    -webkit-filter: invert(60%);
+    vertical-align: middle;
+}
+
+.menuleiste {
+    background-image: url(img/glyphicons/png/glyphicons-517-menu-hamburger.png);
+    justify-content: flex-start;
+    margin-right: 10px;
+    margin-bottom: auto;
+    margin-top: auto;
+}
+
+.new-item {
+    background-image: url(img/glyphicons/png/glyphicons-433-plus.png);
+    justify-content: flex-end;
+    margin-left: 5px;
+    margin-bottom: auto;
+    margin-top: auto;
+}
+
+/*  ---------------- Listen css -------------- */
+.listen .thumbnails {
+    background-image: url(img/glyphicons/png/glyphicons-157-show-thumbnails.png);
+    padding: 0px;
+    margin-left: auto;
+    margin-bottom: auto;
+    margin-top: auto;
+    justify-content: flex-end;
+}
+
+.listen ul {
+    padding: 0;
+    min-height: 100%;
+    width: 100%;
+    background: white;
+    margin: 20px 0px 0px 0px;
+    height: 100%;
+}
+.listen li {
+    /*padding: 10px;*/
+    display: flex;
+    /*margin-right: 10px;*/
+    border-top: 1.5px solid var(--myapp-color-separator);
+    margin-bottom: 10px;
+    margin-top: 10px;
+    height: 111px;
+}
+
+
+.listen li:nth-child(1) {
+    border-top: none;
+}
+
+.listen column {
+    height: 120px;
+    width: 125px;
+}
+
+.listen column.list-img {
+    vertical-align: middle;
+    overflow: hidden;
+}
+
+.listen column:nth-child(1) {
+    width: auto;
+    padding-left: 0;
+    justify-content: flex-start;
+    background-color: white;
+    margin: auto 5px auto 15px;
+}
+
+.listen column:nth-child(2) {
+    padding-left: 10px;
+    width: 60%;
+    justify-content: flex-start;
+    margin-right: auto;
+}
+
+.listen column:nth-child(2) p {
+    margin: 0px;
+    line-height: calc(70px / 3);
+    vertical-align: middle;
+    margin-bottom: 5px;
+
+}
+
+.listen column:nth-child(2) p:first-child {
+    margin-top: 10px;
+}
+
+.listen column:nth-child(3) {
+    width: 25%;
+    text-align: right;
+    margin-right: 10px;
+}
+
+.listen column:nth-child(3) p {
+    margin: 0px;
+    line-height: calc(125px / 2);
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.listen .imgbtn-wrapper {
+    vertical-align: bottom !important;
+}
+
+.listen .list-text {
+    color: lightgray;
+    margin-bottom: auto;
+    margin-top: auto;
+    text-overflow: none;
+}
+
+.listen .list-content {
+    font-weight: 600;
+}
+
+.listen .list-img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    margin-right: auto;
+    display: block;
+}
+
+.listen .datum {
+    vertical-align: top !important;
+    background-size: auto !important;
+    margin: 0;
+    line-height: 47px !important;
+}
+
+.listen figure {
+    position: relative;
+    /*width: 100px;
+    height: 100px;*/
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.listen .play {
+    background-image: url(img/glyphicons/png/glyphicons-174-play.png);
+    height: 18px;
+    width: 16px;
+    padding: 0;
+    margin: 0 5px auto auto;
+    justify-content: flex-start;
+}
+
+.listen  .option-vertical {
+    height: 20px;
+    width: 15px;
+    margin: 0 0 5px 0;
+    background-image: url(img/glyphicons/png/glyphicons-518-option-vertical.png);
+    background-size: auto !important;
+    vertical-align: bottom !important;
+}
+
+/*  ---------------- Kachel css -------------- */
+.kachel .thumbnails {
+    background-image: url(img/glyphicons/png/glyphicons-115-list.png);
+    padding: 0px;
+    margin-left: auto;
+    margin-bottom: auto;
+    margin-top: auto;
+    justify-content: flex-end;
+}
+
+.kachel ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0;
+    min-height: 100%;
+    width: 100%;
+    background: white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0px;
+    height: 100%;
+}
+.kachel li {
+    list-style-type: none;
+    margin:7px auto 7px auto;
+    width: auto;
+    height: 100px;
+}
+
+.kachel column.list-img {
+    vertical-align: middle;
+    overflow: hidden;
+}
+
+.kachel column:nth-child(1) {
+    width: auto;
+    padding-left: 0;
+    justify-content: flex-start;
+    background-color: white;
+    margin: auto 5px auto 15px;
+}
+
+.kachel column:nth-child(2) {
+    transition: all 1s;
+    display: none;
+}
+
+.kachel column:nth-child(3) {
+    color: white!important;
+    position: relative;
+}
+
+.kachel .imgbtn-wrapper {
+    position: absolute;
+    top: -57px;
+    right: -93px;
+}
+
+.kachel .list-img {
+    position: relative;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    margin-right: auto;
+    display: block;
+}
+
+.kachel .datum {
+    display: none;
+}
+
+.kachel figure {
+    position: relative;
+    width: 95px;
+    height: 95px;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.kachel  .option-vertical {
+    height: 20px;
+    width: 15px;
+    background-image: url(img/glyphicons/png/glyphicons-518-option-vertical.png);
+    background-size: auto !important;
+    vertical-align: bottom !important;
+    filter: invert(90%);
+    -webkit-filter: invert(90%);
+    color: white;
+}
+
+
+/*   ---------- Footer -------- */
+
+footer {
+    display: flex;
+    position: fixed;
+    bottom: 0px;
+    background-color: var(--myapp-color-header);
+    height: 50px;
+    width: 100%;
+    max-width: 100%;
+    line-height: 50px;
+    border-top: 3px solid darkorange;
+    vertical-align: middle;
+}
+
+.logout {
+    background-image: url(img/glyphicons/png/glyphicons-388-log-out.png);
+    margin-bottom: auto;
+    margin-top: auto;
+    margin-right: auto;
+    justify-content: flex-start;
+}
+
+.refresh {
+    background-image: url(img/glyphicons/png/glyphicons-82-refresh.png);
+    margin-left: auto;
+    margin-bottom: auto;
+    margin-top: auto;
+    justify-content: flex-end;
+}
+
+
+@media only screen and (max-width: 600px) {
+    
+}
+
+::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+/* optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    background: #FF0000;
+}
